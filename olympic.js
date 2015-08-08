@@ -1,4 +1,5 @@
 // intentionally verbose
+// usage: geth js ./olympic.js 2>&- > mydump.tsv
 function assert(condition, message) { if (!condition) { throw message || "Assertion failed"; }}
 for (blockNumber = 1026900; blockNumber <= web3.eth.getBlock("latest").number; blockNumber++) {
   var transactions = web3.eth.getBlock(blockNumber).transactions;
@@ -10,3 +11,4 @@ for (blockNumber = 1026900; blockNumber <= web3.eth.getBlock("latest").number; b
     console.log(blockNumber + "\t" + transactionHash + "\t" + transaction.from + "\t" + transaction.to);
   }
 }
+exit;
