@@ -1,6 +1,6 @@
 // intentionally verbose
 function assert(condition, message) { if (!condition) { throw message || "Assertion failed"; }}
-for (blockNumber = 1029924; blockNumber <= web3.eth.getBlock("latest").number; blockNumber++) {
+for (blockNumber = 1026900; blockNumber <= web3.eth.getBlock("latest").number; blockNumber++) {
   var transactions = web3.eth.getBlock(blockNumber).transactions;
   for (transactionIndex in transactions) {
     var transactionHash = transactions[transactionIndex];
